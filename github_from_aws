@@ -22,7 +22,10 @@ ssh -T git@github.com
 #connect to a newly created repository
 git init
 
-#replace "owner/repo_name" with actual name 
+#if repo already exists: replace the ssh_url for actual one
+git remote set-url origin ssh_url
+
+#else when creating a new repo : replace "owner/repo_name" with actual name 
 git remote add origin git@github.com:/owner/repo_name.git  
 
 git branch -M main
